@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Student Information Form</h2>
+    <form id="studentForm" onsubmit="return validateForm()">
+        
+        <!-- Student's Personal Information -->
+        <div class="form-group">
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" name="studentName" required minlength="3" maxlength="50">
+            <span id="studentNameError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required minlength="3" maxlength="100">
+            <span id="fullNameError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="fatherName">Father's Name:</label>
+            <input type="text" id="fatherName" name="fatherName" required minlength="3" maxlength="50">
+            <span id="fatherNameError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="motherName">Mother's Name:</label>
+            <input type="text" id="motherName" name="motherName" required minlength="3" maxlength="50">
+            <span id="motherNameError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="hometown">Hometown:</label>
+            <input type="text" id="hometown" name="hometown" required minlength="2" maxlength="50">
+            <span id="hometownError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="1" max="100">
+            <span id="ageError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required max="2006-12-31">
+            <span id="dobError" class="error"></span>
+        </div>
+
+        <!-- Student's Contact Information -->
+        <div class="form-group">
+            <label for="mobileNumber">Mobile Number:</label>
+            <input type="tel" id="mobileNumber" name="mobileNumber" pattern="[0-9]{10}" required>
+            <span id="mobileNumberError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="fatherMobileNumber">Father's Mobile Number:</label>
+            <input type="tel" id="fatherMobileNumber" name="fatherMobileNumber" pattern="[0-9]{10}" required>
+            <span id="fatherMobileNumberError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="aadharNumber">Aadhar Number:</label>
+            <input type="text" id="aadharNumber" name="aadharNumber" pattern="\d{12}" required>
+            <span id="aadharNumberError" class="error"></span>
+        </div>
+        
+        <div class="form-group">
+            <label for="accountNumber">Bank Account Number:</label>
+            <input type="text" id="accountNumber" name="accountNumber" pattern="\d{9,18}" required>
+            <span id="accountNumberError" class="error"></span>
+        </div>
+
+        <!-- Academic Details -->
+        <div class="form-group">
+            <label for="year12Pass">Year of Passing 12th:</label>
+            <input type="number" id="year12Pass" name="year12Pass" required min="1900" max="2100">
+            <span id="year12PassError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="percentage12">Percentage in 12th:</label>
+            <input type="number" id="percentage12" name="percentage12" min="0" max="100" required>
+            <span id="percentage12Error" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="year10Pass">Year of Passing 10th:</label>
+            <input type="number" id="year10Pass" name="year10Pass" required min="1900" max="2100">
+            <span id="year10PassError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="percentage10">Percentage in 10th:</label>
+            <input type="number" id="percentage10" name="percentage10" min="0" max="100" required>
+            <span id="percentage10Error" class="error"></span>
+        </div>
+
+        <!-- College & Career Information -->
+        <div class="form-group">
+            <label for="fatherProfession">Father's Profession:</label>
+            <input type="text" id="fatherProfession" name="fatherProfession" required minlength="3" maxlength="50">
+            <span id="fatherProfessionError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="collegeName">Current College Name:</label>
+            <input type="text" id="collegeName" name="collegeName" required minlength="3" maxlength="100">
+            <span id="collegeNameError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="collegeSubject">Subject in College:</label>
+            <input type="text" id="collegeSubject" name="collegeSubject" required minlength="3" maxlength="50">
+            <span id="collegeSubjectError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="careerGoal">Career Goal:</label>
+            <input type="text" id="careerGoal" name="careerGoal" required minlength="3" maxlength="100">
+            <span id="careerGoalError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="bestGame">Best Game Played:</label>
+            <input type="text" id="bestGame" name="bestGame" required minlength="3" maxlength="50">
+            <span id="bestGameError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="certificates">Certificates Awarded:</label>
+            <input type="text" id="certificates" name="certificates" required minlength="3" maxlength="100">
+            <span id="certificatesError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="dislikedActivities">Disliked Activities:</label>
+            <input type="text" id="dislikedActivities" name="dislikedActivities" required minlength="3" maxlength="100">
+            <span id="dislikedActivitiesError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="favoritePlace">Favorite Place in the World:</label>
+            <input type="text" id="favoritePlace" name="favoritePlace" required minlength="3" maxlength="100">
+            <span id="favoritePlaceError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="height">Height (in cm):</label>
+            <input type="number" id="height" name="height" required min="30" max="300">
+            <span id="heightError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="favoriteSubject">Favorite Subject in Studies:</label>
+            <input type="text" id="favoriteSubject" name="favoriteSubject" required minlength="3" maxlength="50">
+            <span id="favoriteSubjectError" class="error"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+    <div id="successMessage" class="success-message" style="display:none;">
+        Form submitted successfully!
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        let valid = true;
+        let errorFields = document.querySelectorAll(".error");
+        errorFields.forEach(field => field.textContent = "");
+
+        const fields = [
+            { id: "studentName", name: "Student Name" },
+            { id: "fullName", name: "Full Name" },
+            { id: "fatherName", name: "Father's Name" },
+            { id: "motherName", name: "Mother's Name" },
+            { id: "hometown", name: "Hometown" },
+            { id: "age", name: "Age" },
+            { id: "dob", name: "Date of Birth" },
+            { id: "mobileNumber", name: "Mobile Number" },
+            { id: "fatherMobileNumber", name: "Father's Mobile Number" },
+            { id: "aadharNumber", name: "Aadhar Number" },
+            { id: "year12Pass", name: "Year of Passing 12th" },
+            { id: "percentage12", name: "Percentage in 12th" },
+            { id: "year10Pass", name: "Year of Passing 10th" },
+            { id: "percentage10", name: "Percentage in 10th" },  
+            { id: "fatherProfession", name: "Father's Profession" },
+            { id: "accountNumber", name: "Bank Account Number" },
+            { id: "collegeName", name: "Current College Name" },
+            { id: "collegeSubject", name: "Subject in College" },
+            { id: "careerGoal", name: "Career Goal" },
+            { id: "bestGame", name: "Best Game Played" },
+            { id: "certificates", name: "Certificates Awarded" },
+            { id: "dislikedActivities", name: "Disliked Activities" },
+            { id: "favoritePlace", name: "Favorite Place in the World" },
+            { id: "height", name: "Height" },
+            { id: "favoriteSubject", name: "Favorite Subject in Studies" }
+        ];
+
+        fields.forEach(field => {
+            let input = document.getElementById(field.id);
+            if (!input.value.trim()) {
+                document.getElementById(field.id + "Error").textContent = field.name + " is required.";
+                valid = false;
+            }
+        });
+
+        if (valid) {
+            document.getElementById("successMessage").style.display = "block";
+        }
+
+        return valid;
+    }
+</script>
+
+</body>
+</html>

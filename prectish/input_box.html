@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #input {
+            padding: 6px;
+            background-color: lightcyan;
+        }
+
+        #btn {
+            padding: 5px;
+            border-color: black;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text text" id="input">
+    <button id="btn">Add</button>
+    <ul id="order">
+
+    </ul>
+
+</body>
+<script>
+    let input = document.getElementById("input"); 
+    let bt = document. getElementById("btn"); 
+    let ul = document.getElementById("order"); 
+
+    bt.addEventListener("click", function () {
+        let num1 = input.value;
+        if (num1) {
+            
+            let li = document.createElement("li");
+            li.textContent = num1;
+            ul.appendChild(li);
+
+            input.value = "";
+        }
+    });
+</script>
+
+
+
+
+
+</html>

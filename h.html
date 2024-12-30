@@ -1,0 +1,108 @@
+<div class="container-fluid py-5">
+    
+    <div class="scroll-container" id="imageScroll"
+        style="display: flex; overflow-x: auto; scroll-behavior: smooth;">
+    
+        <div class="image-block">
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center text-dark  ">
+                    <img src="images/logo-008.png" alt="Image 1" class="img-fluid custom-img-size">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-007.png" alt="Image 2" class="img-fluid custom-img-size">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-004.png" alt="Image 3" class="img-fluid custom-img-size">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-006.png" alt="Image 4" class="img-fluid custom-img-size">
+                </div>
+            </div>
+        </div>
+        <div class="image-block">
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-004.png" alt="Image 5" class="img-fluid custom-img-size">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-003.png" alt="Image 6" class="img-fluid custom-img-size">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-002.png" alt="Image 7" class="img-fluid custom-img-size">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-003.png" alt="Image 8" class="img-fluid custom-img-size">
+                </div>
+            </div>
+        </div>
+        <div class="image-block">
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-002.png" alt="Image 9" class="img-fluid custom-img-size">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-003.png" alt="Image 10" class="img-fluid custom-img-size">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-002.png" alt="Image 11" class="img-fluid custom-img-size">
+                </div>
+            </div>
+            <div class="col-auto">
+                <div class="border bg-light d-flex justify-content-center align-items-center">
+                    <img src="images/logo-003.png" alt="Image 12" class="img-fluid custom-img-size">
+                </div>
+            </div>
+        </div>
+        <!-- Add more image blocks as needed -->
+    </div>
+
+    <!-- Pagination Bullets -->
+    <div class="pagination-container text-center mt-3">
+        <span class="pagination-bullet active" data-slide="1" aria-label="Go to slide 1"></span>
+        <span class="pagination-bullet" data-slide="2" aria-label="Go to slide 2"></span>
+        <span class="pagination-bullet" data-slide="3" aria-label="Go to slide 3"></span>
+        <span class="pagination-bullet" data-slide="4" aria-label="Go to slide 4"></span>
+    </div>
+</div>
+<script>
+    // JavaScript to toggle the active state of pagination bullets
+    const bullets = document.querySelectorAll('.pagination-bullet');
+    const scrollContainer = document.getElementById('imageScroll');
+    const imageBlocks = scrollContainer.querySelectorAll('.image-block');
+
+    bullets.forEach(bullet => {
+        bullet.addEventListener('click', function () {
+            // Remove 'active' class from all bullets
+            bullets.forEach(b => b.classList.remove('active'));
+
+            // Add 'active' class to the clicked bullet
+            this.classList.add('active');
+
+            // Get the index of the clicked bullet
+            const index = parseInt(this.getAttribute('data-slide')) - 1;
+
+            // Scroll the images container to the corresponding image block (4 images per block)
+            const offset = imageBlocks[index].offsetLeft;
+            scrollContainer.scrollTo({
+                left: offset,
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>

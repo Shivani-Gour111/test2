@@ -1,0 +1,300 @@
+      body{
+        overflow-x: hidden;
+      }
+      .ab, .h1 {
+           background-image: url('./images/hero.jpg');
+           background-position: center;
+           background-size: cover;
+           background-repeat: no-repeat;
+           height: 80vh;
+           background-attachment: fixed;
+           min-height: initial;
+           font-weight: 400;
+           font-family: 'Marcellus', serif;
+           text-transform: capitalize;
+
+       }
+
+       .img,
+       .h2,
+       .img1 {
+           font-family: 'Marcellus', serif;
+           text-transform: capitalize;
+       }
+
+       .abc,
+       .h1 {
+           background-image: url('./images/bg-03.jpg');
+           background-position: center;
+           background-size: cover;
+           background-repeat: no-repeat;
+           height: 80vh;
+           background-attachment: fixed;
+           min-height: initial;
+           font-weight: 400;
+           font-family: 'Marcellus', serif;
+           text-transform: capitalize;
+
+       }
+
+       .ab2 {
+
+           background-image: url("./images/bg-001.jpg");
+           background-position: center center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           width: 100%;
+           min-width: initial;
+
+       }
+
+       .ab3 {
+
+           background-image: url("./images/bg-02.jpg");
+           background-position: center center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           width: 100%;
+           min-width: initial;
+
+       }
+
+
+       .a {
+           text-decoration: line-through;
+           text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+           /* Blur effect */
+           opacity: 0.7;
+       }
+
+       /* .custom-hover:hover{
+        color:black ;
+  
+    }
+      .menu-link {
+        color: #343a40; /* Default dark color */
+       /* text-decoration:
+    }  */
+
+
+       .custom-img-size {
+           width: 200px;
+           /* Adjust width of the images */
+           height: auto;
+       }
+
+       
+
+       
+
+       /* Style for the scroll container and image blocks */
+       .scroll-container {
+           display: flex;
+           overflow-x: scroll;
+           scroll-behavior: smooth;
+       }
+
+       .image-block {
+           display: flex;
+           gap: 10px;
+           /* Adjust gap between images */
+       }
+
+       .col-auto {
+           flex-shrink: 0;
+           /* Prevents images from shrinking */
+       }
+
+       .menu-link {
+        text-decoration: none !important;
+    }
+    
+    /* Apply hover effect */
+    .navbar-nav .menu-link:hover {
+        color: #F8B6C4 !important;  /* Light pink color */
+        text-decoration: none !important;  /* Remove underline */
+    }
+    
+    /* Optional: Active state style */
+    .navbar-nav .menu-link:active {
+        color: #F8B6C4 !important;
+        text-decoration: none !important;
+    }
+    .container-fluid .menu-link:hover {
+        color: #F8B6C4 !important;
+        text-decoration: none !important;
+    }
+
+.padding-container{
+    padding: 0% 5% 0 0;
+}
+
+       .bgc {
+           background-color: #F6EDF0;
+           text-decoration: none;
+           background-size: cover; 
+           background-position: center; 
+           margin-top: -3rem;
+           padding: 10% 8%;
+       }
+       .bgc2 {
+        background-color: #F6EDF0;
+        text-decoration: none;
+        background-size: cover; 
+        background-position: center; 
+        margin-left: -1rem;
+       
+    }
+    .bgc3 {
+        background-color: #F6EDF0;
+        text-decoration: none;
+        background-size: cover; 
+        background-position: center; 
+        
+       
+    }
+    
+
+
+       .scroll-container {
+           display: flex;
+           padding-bottom: 20px;
+           /* Space for scrollbar */
+           margin-bottom: 30px;
+           /* Space between images and bullets */
+           overflow: hidden;
+           /* Remove horizontal scrollbar */
+       }
+
+       .scroll-container .col-auto {
+           flex-shrink: 0;
+           /* Prevent images from shrinking */
+           width: 150px;
+           /* Fixed width for each image */
+           margin-right: 10px;
+           /* Space between images */
+       }
+
+       .scroll-container img {
+           width: 100%;
+           height: auto;
+           object-fit: contain;
+       }
+
+       /* Styling for the pagination bullets */
+       
+      
+       .about,
+       .h1 {
+           background-image: url('./images/bg-05.jpg');
+           background-position: center center;
+           background-repeat: no-repeat;
+           background-size: cover;
+
+           min-width: initial;
+           width: 200%;
+           /* new */
+           min-height: initial;
+           font-weight: 400;
+           font-family: 'Marcellus', serif;
+           text-transform: capitalize;
+
+       }
+
+       .about1 {
+           background-image: url('./images/bg-04.jpg');
+           background-position: center center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           min-width: initial;
+
+
+       }
+
+       .about2,
+       h4,
+       p,
+       h2 {
+           min-height: initial;
+           font-weight: 400;
+           font-family: 'Marcellus', serif;
+           text-transform: capitalize;
+
+       }
+
+       .contact {
+           background-image: url('./images/bg-06.jpg');
+           background-position: center center;
+           background-repeat: no-repeat;
+           background-size: cover;
+           /* Image ko full width aur height cover karne ke liye */
+           height: 500px;
+           width: 600px;
+           /* Image ko fixed height dena taaki achi dikhai de */
+           min-height: initial;
+           font-weight: 400;
+           font-family: 'Marcellus', serif;
+           text-transform: capitalize;
+           
+       }
+
+       .icon-container {
+          
+            background-color: #d4a6b6; /* Light gray background for the circle */
+            border-radius: 50%; /* Circle shape */
+            width: 30px; /* Fixed width for the circle */
+            height: 30px; /* Fixed height for the circle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px; /* Icon size */
+        }
+        
+        /* Optional: Adjust icon size */
+       
+       .icon-container i {
+           font-size: 18px;
+           /* Icon size remains the same */
+           color: white;
+           /* Icon color */
+       }
+       .mak{
+        min-height: initial;
+        font-weight: 400;
+        font-family: 'Marcellus', serif;
+        text-transform: capitalize;
+    line-height: 1em;
+
+       }
+       .btn {
+        margin-left: 5px;  
+        margin-right: 5px; 
+        border:none;
+    } 
+
+    /* Red background color for the buttons */
+    
+    /* Active state style for the clicked button */
+    .btn.active {
+       
+        outline: none;
+        color:black;
+    }
+    .btn:focus {
+        outline: none; /* Removes the outline */
+        box-shadow: none; /* Removes any box-shadow that might appear */
+    }
+    .ff{
+        font-family: 'Marcellus',serif;
+        font-size: 24px;
+    }
+    #image-container {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+        -ms-overflow-style: none;  /* For Internet Explorer 10+ */
+        scrollbar-width: none;  /* For Firefox */
+    }
+    
+    #image-container::-webkit-scrollbar {
+        display: none;  /* For Chrome, Safari, and Opera */
+    }
+    
